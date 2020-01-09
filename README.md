@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+Design and implement as many of the following features as you feel comfortable (and have time for), include any notes that document the frameworks used, issues you discovered and how you chose to address them, and don’t forget some images/gifs/videos and how you can test these functionalities. 
 
-### `npm start`
+If you don’t have time to implement all the features but believe your design would support them, feel free to just explain how you would go about implementing them given more time.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Objective 
 
-### `npm test`
+You are required to prepare an html page with all static contents and implement the following features as part of your assignment. The main focus of this assignment is CSS skills.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A product catalog page is what you commonly see while browsing products in retail websites, this page contains a list of products with information related to products.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Implementation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This Product catalog has been completed in React.js using Api call Given in the Assignment -
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[API URL](https://gist.githubusercontent.com/bharadwajturlapati/4e81154dbcc7d6928921b96057fc5b4a/raw/d31da32d6e5c1dd2a11968d7e94d3c60dfd50fcb/products.json).
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Functionalities
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Product catalog has two tab
+    - General and 
+    - Others
+## Need to Improve 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    - Can add more css like 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  [See Example](https://codepen.io/virgilpana/pen/RNYQwB).
 
-## Learn More
+## Drag and Drop 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    - Can use React library
+[Like :](https://www.npmjs.com/package/react-beautiful-dnd).  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Clone This repo 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+[url](https://github.com/Wishvanath/Product-catalog.git)
 
-### Analyzing the Bundle Size
+### Run in your local system
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Navigate to your project folder 
+- npm install
+- npm start
+- navigate to your browser [url]("http://localhost:3000").
+- make sure you have install node.js in your local system
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Visit hosted Website 
 
-### Advanced Configuration
+[Product Catalog Website](http://Wishvanath.github.io/Product-catalog).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
