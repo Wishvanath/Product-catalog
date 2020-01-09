@@ -18,9 +18,36 @@ export default class App extends Component {
 
   // login to categories the general product and other product
 
+  productCategoryMothod(product_data){
+    var modified_data = [];
+    console.log(product_data);
+    for(let [key, value] of Object.entries(product_data)){
+      modified_data.push(value);
+      console.log(modified_data);
+    }
+    
+    var filter_product = this.findProduct(modified_data, { hub : 'general'});
+    this.setState({general_product: filter_product.general});
+    this.setState({rest_product: filter_product.others});
 
 
+  }
 
+  findProduct(data, criteria){
+    var general = [];
+    var others = [];
+    data.filter(function(obj){
+      Object.keys(criteria).every(function(c){
+        if(obj[c] === criteria[c]){
+          general.push(obj);
+        }else{
+          others.push(obj)
+        }
+        return null
+      })
+    })
+    return ({general:general,others:others})
+  }
 
 
 
@@ -28,10 +55,15 @@ export default class App extends Component {
 
 
 // component did mount block
-componentDidMount(){
-  fetch('https://gist.githubusercontent.com/bharadwajturlapati/4e81154dbcc7d6928921b96057fc5b4a/raw/d31da32d6e5c1dd2a11968d7e94d3c60dfd50fcb/products.json')
+async componentDidMount(){
+  await fetch('https://gist.githubusercontent.com/bharadwajturlapati/4e81154dbcc7d6928921b96057fc5b4a/raw/d31da32d6e5c1dd2a11968d7e94d3c60dfd50fcb/products.json')
     .then(response => response.json())
     .then(data => this.setState({all_product: data}))
+
+
+
+    // call the login function
+    this.productCategoryMothod(this.state.all_product)
 
 }
 
@@ -47,7 +79,15 @@ componentDidMount(){
   render() {
     return (
       <div>
-       {JSON.stringify(this.state.all_product)}
+       {/* {JSON.stringify(this.state.all_product)} */}
+       {/* General Product  */}
+       <h1>General Product</h1>
+       {JSON.stringify(this.state.general_product)}
+
+       <h1>Others Product</h1>
+       {JSON.stringify(this.state.rest_product)}
+
+
       </div>
     )
   }
