@@ -27,14 +27,17 @@ Product catalog has two tab
     - Others
 ## Need to Improve 
 
-    - Can add more css like 
+    - Can add more css
+    - Improve Card design
+    - Add animation on the card
+    - Hover Effect 
 
   [See Example](https://codepen.io/virgilpana/pen/RNYQwB).
 
 ## Drag and Drop 
 
     - Can use React library
-[Like :](https://www.npmjs.com/package/react-beautiful-dnd).  
+[See Example](https://www.npmjs.com/package/react-beautiful-dnd).  
 
 
 ## Clone This repo 
@@ -52,7 +55,7 @@ Product catalog has two tab
 
 ### Visit hosted Website 
 
-[Product Catalog Website](http://Wishvanath.github.io/Product-catalog).
+[Product Catalog Website - ](http://Wishvanath.github.io/Product-catalog-deploy).
 
 
 
