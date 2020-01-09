@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ProductCard from './component/Product-list/product-list';
 
 export default class App extends Component {
   // constructor def
@@ -20,10 +21,10 @@ export default class App extends Component {
 
   productCategoryMothod(product_data){
     var modified_data = [];
-    console.log(product_data);
+    // console.log(product_data);
     for(let [key, value] of Object.entries(product_data)){
       modified_data.push(value);
-      console.log(modified_data);
+      // console.log(modified_data);
     }
     
     var filter_product = this.findProduct(modified_data, { hub : 'general'});
@@ -45,6 +46,7 @@ export default class App extends Component {
         }
         return null
       })
+      return null
     })
     return ({general:general,others:others})
   }
@@ -80,14 +82,44 @@ async componentDidMount(){
     return (
       <div>
        {/* {JSON.stringify(this.state.all_product)} */}
+       
        {/* General Product  */}
-       <h1>General Product</h1>
+
+       {/* <h1>General Product</h1>
        {JSON.stringify(this.state.general_product)}
 
        <h1>Others Product</h1>
-       {JSON.stringify(this.state.rest_product)}
+       {JSON.stringify(this.state.rest_product)} */}
 
 
+
+       {/* <ProductCard product = {this.state.general_product} product_title ={"General Product"} /> */}
+
+       <div className="container">
+          <div className="row justify-content-center ">
+              <h1 className="mt-5 mb-5 product_title">Product Catalog</h1>
+          </div>
+        </div>
+
+        {/* <!-- Nav pills --> */}
+        <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#general">General Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#other">Other Product</a>
+            </li>
+        </ul>
+
+        {/* <!-- Tab panes --> */}
+        <div class="tab-content">
+          <div class="tab-pane container active" id="general">
+              <ProductCard product = {this.state.general_product} product_title ={"General Product"}/>
+          </div>
+          <div class="tab-pane container fade" id="other">
+              <ProductCard product = {this.state.rest_product} product_title = {"Other Product"}/>
+          </div>
+        </div>
       </div>
     )
   }
