@@ -10,8 +10,6 @@ const ProductCard = (props) => {
 
     //return main component
     return(
-        <div>
-           
            <div className="container-fluid">
                 <h3 className="mb-3 mt-3 hub_title">{product_title}</h3>
                 <div className="row product_wrapper">
@@ -46,8 +44,6 @@ const ProductCard = (props) => {
 
                 </div>
             </div>
-
-        </div>
     )
 }
 
